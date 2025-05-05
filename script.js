@@ -68,4 +68,4 @@ nextBtn.onclick = () => {
 };
 
 // Initial render
-renderCalendar();
+renderCalendar()

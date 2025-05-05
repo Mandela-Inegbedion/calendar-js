@@ -28,7 +28,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 80vh;
+  margin: 30px auto;
 }
 
 .calendar-container {
@@ -135,5 +135,27 @@ p {
   pointer-events: none;
 }
 
+@media screen and (max-width: 600px) {
+  .calendar-container {
+    width: 90%;
+  }
 
+  .calendar-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .calendar-header button {
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+
+  .weekdays div, .days div {
+    padding: 6px 0;
+    font-size: 0.9rem;
+  }
+  .days div {
+    margin: 2px;
+  }
+  
+}
 
