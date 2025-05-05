@@ -28,7 +28,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 30px auto;
+  margin: 50px auto;
 }
 
 .calendar-container {
@@ -122,6 +122,13 @@ p {
   transform: translate(-50%, -50%) scale(1.2);
   animation: pulse 1.2s ease-out infinite; 
   z-index: -1;
+}
+
+.sunday {
+  color: #000000;  /* Red tone */
+  font-weight: bold;
+  background-color: #ffecec;
+  border-radius: 8px;
 }
 
 @keyframes pulse {

@@ -30,22 +30,31 @@ function renderCalendar() {
   }
 
   // Main month days
-  for (let i = 1; i <= daysInMonth; i++) {
-    const date = new Date(currentYear, currentMonth, i); 
-    const dayOfWeek = date.getDay(); 
+ // Main month days
+for (let i = 1; i <= daysInMonth; i++) {
+  const date = new Date(currentYear, currentMonth, i); 
+  const dayOfWeek = date.getDay(); 
 
-    const dayDiv = document.createElement('div');
-    dayDiv.textContent = i;
+  const dayDiv = document.createElement('div');
+  dayDiv.textContent = i;
 
-    // Add 'today' class if it is the current day
-    if (i === today.getDate() &&
-        currentMonth === today.getMonth() &&
-        currentYear === today.getFullYear()) {
-      dayDiv.classList.add('today');
-    }
-
-    daysContainer.appendChild(dayDiv);
+  // Highlight today
+  if (
+    i === today.getDate() &&
+    currentMonth === today.getMonth() &&
+    currentYear === today.getFullYear()
+  ) {
+    dayDiv.classList.add('today');
   }
+
+  // Style Sundays
+  if (dayOfWeek === 0) {
+    dayDiv.classList.add('sunday');
+  }
+
+  daysContainer.appendChild(dayDiv);
+}
+
 }
 
 // Navigation buttons
@@ -68,4 +77,4 @@ nextBtn.onclick = () => {
 };
 
 // Initial render
-renderCalendar()
+renderCalendar();
